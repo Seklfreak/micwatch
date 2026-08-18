@@ -1,0 +1,17 @@
+# micwatch configuration.
+#
+# Copy this to ~/.config/micwatch/config and fill in your own webhook URLs.
+# Home Assistant webhook IDs are secrets, so that file is chmod 600 and the
+# repo's .gitignore excludes a config file sitting in the working tree.
+
+MICWATCH_START_URL=http://homeassistant.local:8123/api/webhook/your-call-start-webhook-id
+MICWATCH_END_URL=http://homeassistant.local:8123/api/webhook/your-call-end-webhook-id
+
+# Seconds the mic must stay continuously idle before call-end fires.
+# Switching audio devices mid-call briefly drops the in-use flag, so keep this
+# comfortably above a device switch. Default 10.
+# MICWATCH_IDLE_SECONDS=10
+
+# Per-request curl timeout in seconds. Kept short so an unreachable Home
+# Assistant never blocks anything. Default 2.
+# MICWATCH_HTTP_TIMEOUT=2

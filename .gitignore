@@ -1,0 +1,6 @@
+# Local config with real webhook URLs (secrets)
+config
+
+# Build output
+micwatch
+*.dSYM/
